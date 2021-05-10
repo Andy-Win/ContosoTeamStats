@@ -28,6 +28,10 @@ namespace ContosoTeamStats
             {
                 option.Configuration = Configuration["CacheConnection"];
             });
+            services.AddDistributedRedisCache(option =>
+            {
+                option.Configuration = Configuration["CacheConnection"];
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
